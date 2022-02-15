@@ -1,0 +1,84 @@
+/* antic-slab-regular - latin */
+@font-face {
+    font-family: 'Antic Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/antic-slab-v15-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/antic-slab-v15-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/antic-slab-v15-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/antic-slab-v15-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/antic-slab-v15-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/antic-slab-v15-latin-regular.svg#AnticSlab') format('svg'); /* Legacy iOS */
+  }
+
+:root {
+    font-family: 'Antic Slab', serif;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+
+    background: url('./assets/skulls.jpg');
+}
+
+#header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto;
+
+    /* user-select: none; */
+}
+
+#navBar {
+    width: 100%;
+    grid-area: 2 / 1;
+    justify-content: center;
+    
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+
+    background-color: black;
+    color: white;
+}
+
+#restName {
+    grid-area: 1 / 1 / 1 / span 3;
+    font-size: 3rem;
+    text-align: center;
+
+    background-color: white;
+    color: red;
+    padding: 20px 30px;
+}
+
+#navButtons {
+    grid-area: 2 / 2;
+
+    display: grid;
+    grid-template-columns: auto auto;
+
+    cursor: pointer;
+}
+
+.navigation {
+    padding: 10px 30px;
+    
+}
+
+.navigation:hover {
+    background-color: white;
+    color: red;
+    transition: 300ms ease-in-out;
+}
